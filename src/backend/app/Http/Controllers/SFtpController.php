@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Exception;
 
 class SFtpController extends Controller
 {
@@ -12,7 +13,7 @@ class SFtpController extends Controller
       $localFile = public_path($fileName);
 
       if (!file_exists($localFile) || !is_readable($localFile)) {
-          die('Local file does not exist or is not readable');
+          throw new Exception('Local file does not exist or is not readable');
       }
 
       $remoteFile = $fileName;
@@ -24,12 +25,12 @@ class SFtpController extends Controller
       ];
       $connection = ssh2_connect($sftpSetting['host'], $sftpSetting['port']);
       if (!$connection) {
-          die('Connection failed');
+          throw new Exception('Connection failed');
       }
             
       // 認証
       if (!ssh2_auth_password($connection, $sftpSetting['username'], $sftpSetting['passphrase'])) {
-          die('Authentication failed');
+          throw new Exception('Authentication failed');
       }
 
       // SFTPセッションの開始
@@ -39,16 +40,16 @@ class SFtpController extends Controller
       $stream = fopen("ssh2.sftp://{$sftp}/{$remoteFile}", 'w');
 
       if (!$stream) {
-          die('Could not open file');
+          throw new Exception('Could not open file');
       }
 
       $data_to_write = file_get_contents($localFile);
       if ($data_to_write === false) {
-          die('Could not read local file');
+          throw new Exception('Could not read local file');
       }
 
       if (fwrite($stream, $data_to_write) === false) {
-          die('Could not send data from local file');
+          throw new Exception('Could not send data from local file');
       }
 
       fclose($stream);
