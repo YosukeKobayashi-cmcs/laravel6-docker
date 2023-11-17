@@ -13,6 +13,9 @@ https://www.docker.com/products/docker-desktop/
 # このプロジェクトのルートフォルダに行き下記コマンドをたたく
 ```
 docker compose up
+## laravelのサーバーに入る
+docker compose exec backend bash
+## dbの初期化
 php artisan migrate
 php artisan db:seed
 ```
@@ -29,7 +32,9 @@ Email: parmalatinter@gmail.com
 Pass: y4VSk!RE6j34Hnb
 ```
 
-## jsonの確認方法
+## chromeでjsonの確認方法
+文字化けするので下記をインストール
+
 https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=ja&pli=1
 
 ## キャッシュ削除
