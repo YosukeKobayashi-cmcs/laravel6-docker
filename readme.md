@@ -17,4 +17,11 @@ Composer version 2.0.14 2021-05-21 17:03:37
 
 root@123456789123:/var/www/html# composer create-project --prefer-dist "laravel/laravel=6.*" .
 root@123456789123:/var/www/html# chown www-data storage/ -R
+
+php artisan migrate
+php artisan db:seed
+
 ```
+
+## キャッシュ削除
+php artisan config:cache
