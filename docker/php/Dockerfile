@@ -10,7 +10,8 @@ RUN apt-get update  \
     zip \
     unzip \
     vim \
-    && docker-php-ext-install pdo_mysql bcmath mbstring \
+    libonig-dev \
+    && docker-php-ext-install pdo_mysql bcmath \
     && a2enmod rewrite
 
 WORKDIR /var/www/html
