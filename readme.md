@@ -6,11 +6,11 @@
 [ハマりを回避してDockerでLaravel6系環境構築](https://qiita.com/2san/items/6e8af71f3186ad300538)
 [モダンフロントとLaravelでCRUD処理をやってみる](https://qiita.com/2san/items/57d6a2cbe053dd314223)
 
-# 準備
+## 準備
 docker desktopをインストールしておく
 https://www.docker.com/products/docker-desktop/
 
-# このプロジェクトのルートフォルダに行き下記コマンドをたたく
+## このプロジェクトのルートフォルダに行き下記コマンドをたたく
 ```
 docker compose up
 ## laravelのサーバーに入る
