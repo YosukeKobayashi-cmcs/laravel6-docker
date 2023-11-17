@@ -15,6 +15,15 @@ php artisan db:seed
 ## 対象URL
 http://127.0.0.1/public/outputCsvBySFtp
 
+## sftptogoのアカウント
+https://sftptogo.com/
+
+```
+無料期間：12/1まで使用可能
+Email: parmalatinter@gmail.com
+Pass: y4VSk!RE6j34Hnb
+```
+
 ## jsonの確認方法
 https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=ja&pli=1
 
