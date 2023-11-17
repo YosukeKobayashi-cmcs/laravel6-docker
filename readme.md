@@ -1,7 +1,27 @@
 ## docker環境参考サイト 
 [ハマりを回避してDockerでLaravel6系環境構築](https://qiita.com/2san/items/6e8af71f3186ad300538)
 
-# 下記コマンドをたたく
+# 準備
+docker desktopをインストールしておく
+https://www.docker.com/products/docker-desktop/
+
+# このプロジェクトのルートフォルダに行き下記コマンドをたたく
+```
+docker compose up
+php artisan migrate
+php artisan db:seed
+```
+
+## 対象URL
+http://127.0.0.1/public/outputCsvBySFtp
+
+## jsonの確認方法
+https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=ja&pli=1
+
+## キャッシュ削除
+php artisan config:cache
+
+## 開発メモ
 ```
 $ docker compose build
 $ docker compose up -d
@@ -22,6 +42,3 @@ php artisan migrate
 php artisan db:seed
 
 ```
-
-## キャッシュ削除
-php artisan config:cache
