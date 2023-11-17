@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todo;
 use Illuminate\Http\Request;
 
 class SFtpController extends Controller
