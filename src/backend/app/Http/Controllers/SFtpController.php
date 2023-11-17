@@ -18,7 +18,7 @@ class SFtpController extends Controller
 
       $remoteFile = $fileName;
       $sftpSetting = [
-          'host' => 'sparkling-water-50295.sftptogo.com', // sparkling-water-50295.sftptogo.com 52.6.173.143 3.222.223.253 107.21.193.164
+          'host' => 'sparkling-water-50295.sftptogo.com',
           'port' => 22,
           'username' => '8e00f9a0a51ff8243d41a1b413134b',
           'passphrase' => 'b1xazuio15tjjbh3l1jeyrw0frgwvr0dw9leqvtu',
