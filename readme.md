@@ -12,10 +12,10 @@ https://www.docker.com/products/docker-desktop/
 
 ## このプロジェクトのルートフォルダに行き下記コマンドをたたく
 ```
-docker compose up
 ## laravelのサーバーに入る
 docker compose exec backend bash
 ## dbの初期化
+docker compose up
 php artisan migrate
 php artisan db:seed
 ```
