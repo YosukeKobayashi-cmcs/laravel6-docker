@@ -16,6 +16,7 @@ RUN apt-get update  \
 
 # Install ssh2 extension
 RUN apt-get install -y libssh2-1 libssh2-1-dev
+RUN composer install
 
 WORKDIR /var/www/html
 
