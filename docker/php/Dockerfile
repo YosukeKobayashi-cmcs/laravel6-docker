@@ -14,7 +14,6 @@ RUN apt-get update  \
     && docker-php-ext-install pdo_mysql bcmath \
     && a2enmod rewrite
 
-# Install ssh2 extension
 RUN apt-get install -y libssh2-1 libssh2-1-dev
 RUN composer install
 
