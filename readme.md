@@ -1,4 +1,4 @@
-## はじめに
+no## はじめに
 このレポジトリはdockerでlaravelとmysqlの環境を用意します。
 それをもとに検証するレポジトリです。
 
@@ -24,6 +24,7 @@ php artisan db:seed
 
 ## 対象URL
 http://127.0.0.1/public/outputCsvBySFtp
+http://127.0.0.1/public/renameSFtpFile
 
 ## chromeでjsonの確認方法
 文字化けするので下記をインストール
