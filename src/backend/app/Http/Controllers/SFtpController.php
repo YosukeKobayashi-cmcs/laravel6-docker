@@ -53,6 +53,8 @@ class SFtpController extends Controller
 
       fclose($stream);
       
+      ssh2_disconnect($connection);
+      
       $result = ['localFile' => $localFile, 'remotePath' => "ssh2.sftp://{$sftp}/{$remoteFile}", 'message' => 'ok'];
       return response()->json($result);
     }
