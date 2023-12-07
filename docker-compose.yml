@@ -31,3 +31,12 @@ services:
       - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
     extra_hosts:
       - "host.docker.internal:host-gateway"
+
+  sftp-server:
+    image: atmoz/sftp
+    container_name: sftp-server
+    volumes:
+      - ./src/sftp/files:/home/user/files
+    ports:
+      - "2222:22"
+    command: "user:password:::files"

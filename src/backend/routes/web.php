@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('fetch_todos', 'TodoController@fetchTodos');
 Route::get('outputCsvBySFtp', 'SFtpController@outputCsvBySFtp');
+Route::get('renameSFtpFile', 'SFtpController@renameSFtpFile');

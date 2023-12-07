@@ -16,12 +16,12 @@ class SFtpController extends Controller
           throw new Exception('Local file does not exist or is not readable');
       }
 
-      $remoteFile = $fileName;
+      $remoteFile = "files/$fileName";
       $sftpSetting = [
-          'host' => 'sparkling-water-50295.sftptogo.com',
+          'host' => 'sftp-server',
           'port' => 22,
-          'username' => '8e00f9a0a51ff8243d41a1b413134b',
-          'passphrase' => 'b1xazuio15tjjbh3l1jeyrw0frgwvr0dw9leqvtu',
+          'username' => 'user',
+          'passphrase' => 'password',
       ];
       $connection = ssh2_connect($sftpSetting['host'], $sftpSetting['port']);
       if (!$connection) {
@@ -35,7 +35,6 @@ class SFtpController extends Controller
 
       // SFTPセッションの開始
       $sftp = ssh2_sftp($connection);
-
       // ファイルのアップロード
       $stream = fopen("ssh2.sftp://{$sftp}/{$remoteFile}", 'w');
 
@@ -54,7 +53,41 @@ class SFtpController extends Controller
 
       fclose($stream);
       
-      $result = ['localFile' => $localFile, 'message' => 'ok'];
+      $result = ['localFile' => $localFile, 'remotePath' => "ssh2.sftp://{$sftp}/{$remoteFile}", 'message' => 'ok'];
+      return response()->json($result);
+    }
+
+    public function renameSFtpFile(Request $request) {
+      $fileName = 'test.csv';
+      $renameFileName = 'test_rename.csv';
+  
+      $remoteFile = "/files/$fileName";
+      $renameFile = "/files/$renameFileName";
+      $sftpSetting = [
+          'host' => 'sftp-server',
+          'port' => 22,
+          'username' => 'user',
+          'passphrase' => 'password',
+      ];
+      $connection = ssh2_connect($sftpSetting['host'], $sftpSetting['port']);
+      if (!$connection) {
+          throw new Exception('Connection failed');
+      }
+            
+      // 認証
+      if (!ssh2_auth_password($connection, $sftpSetting['username'], $sftpSetting['passphrase'])) {
+          throw new Exception('Authentication failed');
+      }
+
+      // SFTPセッションの開始
+      $sftp = ssh2_sftp($connection);
+
+      // ファイル名の変更
+      $result = ['rename file' => $remoteFile, 'message' => 'ok'];
+      if (!ssh2_sftp_rename($sftp, $remoteFile, $renameFile)) {
+        $result['message'] = 'error';
+      }
+
       return response()->json($result);
     }
 }
