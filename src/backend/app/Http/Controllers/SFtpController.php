@@ -88,6 +88,8 @@ class SFtpController extends Controller
         $result['message'] = 'error';
       }
 
+      ssh2_disconnect($connection);
+
       return response()->json($result);
     }
 }
