@@ -1,5 +1,7 @@
 FROM php:7.4-apache
 
+ENV COMPOSER_ALLOW_SUPERUSER 1
+
 COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf   
 COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
 
@@ -12,11 +14,14 @@ RUN apt-get update  \
     vim \
     libonig-dev \
     && docker-php-ext-install pdo_mysql bcmath \
-    && a2enmod rewrite
+    && a2enmod rewrite \
+    && pecl install xdebug-3.1.6  \
+    && docker-php-ext-enable xdebug
 
 RUN apt-get install -y libssh2-1 libssh2-1-dev
-RUN composer install
 
 WORKDIR /var/www/html
+
+RUN composer self-update
 
 EXPOSE 80

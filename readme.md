@@ -12,19 +12,28 @@ https://www.docker.com/products/docker-desktop/
 
 ## このプロジェクトのルートフォルダに行き下記コマンドをたたく
 ```
+## コンテナを立ち上げる
 docker compose up
-## laravelのサーバーに入る
+
+## laravelのサーバーに入る
 docker compose exec backend bash
+
 ## composer install
+
 composer install
-## dbの初期化
+
+## dbの初期化
 php artisan migrate
 php artisan db:seed
 ```
 
+## ホーム
+http://127.0.0.1/public
 ## 対象URL
-http://127.0.0.1/public/outputCsvBySFtp
-http://127.0.0.1/public/renameSFtpFile
+http://127.0.0.1/public/outputCsvBySFtp
+
+http://127.0.0.1/public/renameSFtpFile
+
 
 ## chromeでjsonの確認方法
 文字化けするので下記をインストール
