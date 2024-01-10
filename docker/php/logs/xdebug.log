@@ -1,0 +1,87 @@
+[11] Log opened at 2024-01-10 06:28:38.313257
+[11] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[11] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[11] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[11] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[11] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[11] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[11] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[11] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[11] Log closed at 2024-01-10 06:28:45.086545
+
+[2091] Log opened at 2024-01-10 06:28:45.112968
+[2091] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2091] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2091] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2091] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2091] Log closed at 2024-01-10 06:28:45.116696
+
+[2097] Log opened at 2024-01-10 06:28:45.148569
+[2097] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2097] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2097] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2097] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2097] Log closed at 2024-01-10 06:28:45.151791
+
+[2109] Log opened at 2024-01-10 06:29:51.979170
+[2109] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2109] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2109] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2109] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2109] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2109] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2109] Log closed at 2024-01-10 06:30:02.141257
+
+[2111] Log opened at 2024-01-10 06:31:04.297533
+[2111] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2111] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2111] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2111] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2111] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2111] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2111] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2111] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2111] Log closed at 2024-01-10 06:31:17.876833
+
+[2112] Log opened at 2024-01-10 06:31:26.973674
+[2112] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2112] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2112] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2112] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2113] Log opened at 2024-01-10 06:31:35.073104
+[2113] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2113] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2113] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2113] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2112] Log closed at 2024-01-10 06:31:36.983467
+
+[2113] Log closed at 2024-01-10 06:31:44.580414
+
+[2109] Log opened at 2024-01-10 06:33:40.675351
+[2109] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2109] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2109] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2109] Log closed at 2024-01-10 06:33:51.441531
+
+[2111] Log opened at 2024-01-10 06:34:57.463347
+[2111] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success, but error: Operation now in progress (29).
+[2111] [Step Debug] WARN: Creating socket for 'localhost:9003', connect: Cannot assign requested address.
+[2111] [Step Debug] ERR: Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[2111] Log closed at 2024-01-10 06:35:08.056030
+

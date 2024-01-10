@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('fetch_todos', 'TodoController@fetchTodos');
+Route::get('phpinfo', 'InfoController@phpinfo');
+Route::get('fetchTodos', 'TodoController@fetchTodos');
 Route::get('outputCsvBySFtp', 'SFtpController@outputCsvBySFtp');
 Route::get('renameSFtpFile', 'SFtpController@renameSFtpFile');
