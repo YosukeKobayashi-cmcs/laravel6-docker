@@ -1,7 +1,40 @@
-## docker環境参考サイト 
-[ハマりを回避してDockerでLaravel6系環境構築](https://qiita.com/2san/items/6e8af71f3186ad300538)
+## はじめに
+このレポジトリはdockerでlaravelとmysqlの環境を用意します。
+それをもとに検証するレポジトリです。
 
-# 下記コマンドをたたく
+## docker&laravel環境参考サイト 
+[ハマりを回避してDockerでLaravel6系環境構築](https://qiita.com/2san/items/6e8af71f3186ad300538)
+[モダンフロントとLaravelでCRUD処理をやってみる](https://qiita.com/2san/items/57d6a2cbe053dd314223)
+
+## 準備
+docker desktopをインストールしておく
+https://www.docker.com/products/docker-desktop/
+
+## このプロジェクトのルートフォルダに行き下記コマンドをたたく
+```
+docker compose up
+## laravelのサーバーに入る
+docker compose exec backend bash
+## composer install
+composer install
+## dbの初期化
+php artisan migrate
+php artisan db:seed
+```
+
+## 対象URL
+http://127.0.0.1/public/outputCsvBySFtp
+http://127.0.0.1/public/renameSFtpFile
+
+## chromeでjsonの確認方法
+文字化けするので下記をインストール
+
+https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=ja&pli=1
+
+## キャッシュ削除
+php artisan config:cache
+
+## 開発メモ
 ```
 $ docker compose build
 $ docker compose up -d
@@ -22,6 +55,3 @@ php artisan migrate
 php artisan db:seed
 
 ```
-
-## キャッシュ削除
-php artisan config:cache
