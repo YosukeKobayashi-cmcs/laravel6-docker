@@ -29,11 +29,22 @@ php artisan db:seed
 
 ## ホーム
 http://127.0.0.1/public
+
 ## 対象URL
+### SFTPでファイルを書き出しサンプル
 http://127.0.0.1/public/outputCsvBySFtp
 
+### SFTPでファイルをリネームサンプル
 http://127.0.0.1/public/renameSFtpFile
 
+### mysqlのデーターをjsonで返すサンプル（参照：chromeでjsonの確認方法）
+http://127.0.0.1/public/fetchTodos
+
+### コードカバレッジ結果の生成と表示
+http://127.0.0.1/public/codeCoverage/report
+
+### コードカバレッジデータの削除
+http://127.0.0.1/public/codeCoverage/delete
 
 ## chromeでjsonの確認方法
 文字化けするので下記をインストール

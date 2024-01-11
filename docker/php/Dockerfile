@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf   
+COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
 
 # 必要なパッケージとPHPのssh2拡張機能のインストール
@@ -18,10 +18,27 @@ RUN apt-get update  \
     && pecl install xdebug-3.1.6  \
     && docker-php-ext-enable xdebug
 
-RUN apt-get install -y libssh2-1 libssh2-1-dev
+# 必要なライブラリと拡張機能のインストール ssh
+RUN apt-get install -y libssh2-1 libssh2-1-dev || true && yes '' | pecl install ssh2-1.2 && docker-php-ext-enable ssh2 || true
+
+RUN pecl upgrade-all
 
 WORKDIR /var/www/html
 
 RUN composer self-update
 
-EXPOSE 80
+# www-data USERでパーミッションエラーを防ぐ
+RUN mkdir -p /var/www/html/public/coverage/tmp && \
+    mkdir -p /var/www/html/public/coverage/reports && \
+    mkdir -p /var/www/html/app/Coverage && \
+    mkdir -p /var/www/html/bootstrap && \
+    mkdir -p /var/www/.vscode-server && \
+    chown -R www-data:www-data /var/www/html/public/coverage && \
+    chmod -R 775 /var/www/html/public/coverage && \
+    chown -R www-data:www-data /var/www/html/bootstrap && \
+    chmod -R 775 /var/www/html/bootstrap && \
+    chown -R www-data:www-data /var/www/.vscode-server && \
+    chmod -R 775 /var/www/.vscode-server
+
+# ユーザーをwww-dataに変更
+USER www-data
