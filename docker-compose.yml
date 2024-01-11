@@ -20,7 +20,7 @@ services:
       - "host.docker.internal:host-gateway"
     # ssh2のインストールがdockerfileでできなかったのでここで実施
     command: >
-      bash -c "composer install && composer dump-autoload && apache2-foreground"
+      bash -c "composer install && apache2-foreground"
 
   db:
     image: mysql:8.0.28
