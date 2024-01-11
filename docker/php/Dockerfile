@@ -31,14 +31,16 @@ RUN composer self-update
 RUN mkdir -p /var/www/html/public/coverage/tmp && \
     mkdir -p /var/www/html/public/coverage/reports && \
     mkdir -p /var/www/html/app/Coverage && \
+    mkdir -p /var/www/html/storage && \
     mkdir -p /var/www/html/bootstrap && \
-    mkdir -p /var/www/.vscode-server && \
-    chown -R www-data:www-data /var/www/html/public/coverage && \
-    chmod -R 775 /var/www/html/public/coverage && \
-    chown -R www-data:www-data /var/www/html/bootstrap && \
-    chmod -R 775 /var/www/html/bootstrap && \
-    chown -R www-data:www-data /var/www/.vscode-server && \
-    chmod -R 775 /var/www/.vscode-server
+    mkdir -p /var/www/html/bootstrap/cache && \
+    mkdir -p /var/www/.vscode-server
 
-# ユーザーをwww-dataに変更
-USER www-data
+# コンテナが起動した際に実行されるパーミッションエラーを防ぐスクリプトをコピー
+COPY ./set_permissions.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/set_permissions.sh
+RUN sh /usr/local/bin/set_permissions.sh
+
+# コンテナ起動時に権限設定スクリプトを実行
+CMD ["set_permissions.sh"]
+

@@ -10,7 +10,7 @@
 docker desktopをインストールしておく
 https://www.docker.com/products/docker-desktop/
 
-## このプロジェクトのルートフォルダに行き下記コマンドをたたく
+## このプロジェクトのルートフォルダに行き下記コマンドをたたく(初回のみ)
 ```
 ## コンテナを立ち上げる
 docker compose up
@@ -18,13 +18,15 @@ docker compose up
 ## laravelのサーバーに入る
 docker compose exec backend bash
 
-## composer install
-
-composer install
-
 ## dbの初期化
 php artisan migrate
 php artisan db:seed
+```
+
+## 二回目以降
+```
+## コンテナを立ち上げる
+docker compose up
 ```
 
 ## ホーム
