@@ -27,7 +27,7 @@ WORKDIR /var/www/html
 
 RUN composer self-update
 
-# www-data USERでパーミッションエラーを防ぐ
+# パーミッションエラーを防ぐ
 RUN mkdir -p /var/www/html/public/coverage/tmp && \
     mkdir -p /var/www/html/public/coverage/reports && \
     mkdir -p /var/www/html/app/Coverage && \
