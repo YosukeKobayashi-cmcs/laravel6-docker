@@ -1,5 +1,7 @@
 FROM php:7.4-apache
 
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+
 RUN apt-get update && \
     apt-get install -y git \
     libfreetype6-dev \
